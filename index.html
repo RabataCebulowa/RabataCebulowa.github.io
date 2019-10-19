@@ -22,7 +22,16 @@
         })
     );
     viewer.zoomTo(tileset);
+
+    var clock = new Cesium.Clock({
+   clockStep : Cesium.ClockStep.SYSTEM_CLOCK_MULTIPLIER,
+   multiplier : 1, // how much time to advance each tick
+   shouldAnimate : true // Animation on by default
+});
+
+var viewer = new Cesium.Viewer('cesiumContainer', {
+    clockViewModel : new Cesium.ClockViewModel(clock)
+});
   </script>
-  <iframe src="Calipso_v016_trip"></iframe>
 </body>
 </html>
