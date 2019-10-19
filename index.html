@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.62/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.62/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
 </head>
 <body>
-    <p>siema</p>
+  <div id="cesiumContainer" style="width: 700px; height:400px"></div>
+  <script>
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiOGUwMjhlZS05YzJiLTQ2YmYtYjg1Mi00MzMyNmU5ZDZmZTEiLCJpZCI6MTcwMTIsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1NzE0NzYwMDd9.Ht7a2s7PMmQAofzGGH6HE7A2U4eJMu9EXPkQ9r-wdVc';
+    var viewer = new Cesium.Viewer('cesiumContainer', {
+        terrainProvider: Cesium.createWorldTerrain()
+    });
+
+    var tileset = viewer.scene.primitives.add(
+        new Cesium.Cesium3DTileset({
+            url: Cesium.IonResource.fromAssetId(your_asset_id)
+        })
+    );
+    viewer.zoomTo(tileset);
+  </script>
 </body>
 </html>
