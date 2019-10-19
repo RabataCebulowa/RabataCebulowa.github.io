@@ -4,26 +4,26 @@ body
 }
 
 
-.cesiumContainer {margin: 0 auto; padding: 15px;}
+#cesiumContainer {margin: 0 auto; padding: 15px;}
 
 
 /*PC + notebook*/
 @media (min-width: 1024px) {
-   .cesiumContainer {width: 994px;}
+   #cesiumContainer {width: 994px;}
 }
 
 /*Netbook*/
 @media (max-width: 1023px) {
-   .cesiumContainer {width: 715px;}
+   #cesiumContainer {width: 715px;}
 
 }
 
 /*Tablet*/
 @media (max-width: 734px) {
-   .cesiumContainer {width: 550px;}
+   #cesiumContainer {width: 550px;}
 }
 
 /*SMARTFON*/
 @media (max-width: 599px) {
-   .cesiumContainer {width: 88%;}
+   #cesiumContainer {width: 88%;}
    }
