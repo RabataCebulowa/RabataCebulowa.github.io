@@ -6,7 +6,7 @@ body
 
 /*PC + notebook*/
 @media (min-width: 1024px) {
-   #cesiumContainer {height: 100%;}
+   #cesiumContainer {height: 99%;}
 }
 
 /*Netbook
