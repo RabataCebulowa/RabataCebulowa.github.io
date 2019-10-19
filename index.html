@@ -13,23 +13,26 @@
   <div id="cesiumContainer"></div>
   <script>
     Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiOGUwMjhlZS05YzJiLTQ2YmYtYjg1Mi00MzMyNmU5ZDZmZTEiLCJpZCI6MTcwMTIsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1NzE0NzYwMDd9.Ht7a2s7PMmQAofzGGH6HE7A2U4eJMu9EXPkQ9r-wdVc';
+    var clock = new Cesium.Clock({
+   clockStep : Cesium.ClockStep.SYSTEM_CLOCK_MULTIPLIER,
+   multiplier : 1, // how much time to advance each tick
+   shouldAnimate : true // Animation on by default
+});
+    
     var viewer = new Cesium.Viewer('cesiumContainer', {
-        terrainProvider: Cesium.createWorldTerrain()
+        terrainProvider: Cesium.createWorldTerrain(),
+        shouldAnimate : true,
+        vrButton : true
     });
+    var dataSource = Cesium.CzmlDataSource.load('simple.czml');
+    viewer.dataSources.add(dataSource)
     var tileset = viewer.scene.primitives.add(
         new Cesium.Cesium3DTileset({
             url: Cesium.IonResource.fromAssetId(your_asset_id)
         })
     );
     viewer.zoomTo(tileset);
-
-
-    viewer.dataSources.add(Cesium.CzmlDataSource.load('simple.czml'));
-    viewer.dataSources.add(Cesium.CzmlDataSource.load('orbit.czml'));
-
-  
-var viewer = new Cesium.Viewer('cesiumContainer');
-viewer.dataSources.add(Cesium.CzmlDataSource.load(czml));
+    viewer.scene.globe.enableLighting = true;
   </script>
 </body>
 </html>
