@@ -2,3 +2,25 @@ body
 {
    background-color: black;
 }
+
+
+/*PC + notebook*/
+@media (min-width: 1024px) {
+   .cesiumContainer {width: 994px;}
+}
+
+/*Netbook*/
+@media (max-width: 1023px) {
+   .cesiumContainer {width: 715px;}
+
+}
+
+/*Tablet*/
+@media (max-width: 734px) {
+   .cesiumContainer {width: 550px;}
+}
+
+/*SMARTFON*/
+@media (max-width: 599px) {
+   .cesiumContainer {width: 88%;}
+   }
