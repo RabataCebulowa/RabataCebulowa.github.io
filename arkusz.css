@@ -6,7 +6,7 @@ body
 
 /*PC + notebook*/
 @media (min-width: 1024px) {
-   #cesiumContainer {width: 994px;}
+   #cesiumContainer {width: 994px; height: 60%;}
 }
 
 /*Netbook*/
@@ -22,5 +22,5 @@ body
 
 /*SMARTFON*/
 @media (max-width: 599px) {
-   #cesiumContainer {width: 88%;}
+   #cesiumContainer {width: 88%; height: 90%;}
    }
