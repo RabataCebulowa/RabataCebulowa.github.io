@@ -4,17 +4,27 @@
   <meta charset="utf-8">
   <script src="https://cesium.com/downloads/cesiumjs/releases/1.62/Build/Cesium/Cesium.js"></script>
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.62/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+<<<<<<< HEAD
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ottter's Space</title>
 </head>
 <body>
   <div id="cesiumContainer" style="width=device-width, initial-scale=1.0"></div>
+=======
+</head>
+<body>
+  <div id="cesiumContainer" style="width: 700px; height:400px"></div>
+>>>>>>> 32ddb96b6fe117ced51e4d9118150134e869a3b2
   <script>
     Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiOGUwMjhlZS05YzJiLTQ2YmYtYjg1Mi00MzMyNmU5ZDZmZTEiLCJpZCI6MTcwMTIsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1NzE0NzYwMDd9.Ht7a2s7PMmQAofzGGH6HE7A2U4eJMu9EXPkQ9r-wdVc';
     var viewer = new Cesium.Viewer('cesiumContainer', {
         terrainProvider: Cesium.createWorldTerrain()
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 32ddb96b6fe117ced51e4d9118150134e869a3b2
     var tileset = viewer.scene.primitives.add(
         new Cesium.Cesium3DTileset({
             url: Cesium.IonResource.fromAssetId(your_asset_id)
