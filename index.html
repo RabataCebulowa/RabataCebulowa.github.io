@@ -28,6 +28,8 @@
         terrainProvider: Cesium.createWorldTerrain(),
         shouldAnimate : true
     });
+    var dataSource = Cesium.CzmlDataSource.load('https://github.com/RabataCebulowa/RabataCebulowa.github.io/raw/master/simple.czml');
+    viewer.dataSources.add(dataSource)
     var tileset = viewer.scene.primitives.add(
         new Cesium.Cesium3DTileset({
             url: Cesium.IonResource.fromAssetId(your_asset_id)
