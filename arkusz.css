@@ -4,9 +4,6 @@ body
 }
 
 
-#cesiumContainer {margin: 0 auto; padding: 15px;}
-
-
 /*PC + notebook*/
 @media (min-width: 1024px) {
    #cesiumContainer {width: 994px;}
