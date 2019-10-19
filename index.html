@@ -13,8 +13,20 @@
   <div id="cesiumContainer"></div>
   <script>
     Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiOGUwMjhlZS05YzJiLTQ2YmYtYjg1Mi00MzMyNmU5ZDZmZTEiLCJpZCI6MTcwMTIsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1NzE0NzYwMDd9.Ht7a2s7PMmQAofzGGH6HE7A2U4eJMu9EXPkQ9r-wdVc';
+    var clock = new Cesium.Clock({
+   tartTime : Cesium.JulianDate.fromIso8601('2019-10-19'),
+   currentTime : Cesium.JulianDate.fromIso8601('2019-10-19'),
+   stopTime : Cesium.JulianDate.fromIso8601('2019-10-20'),
+   clockRange : Cesium.ClockRange.LOOP_STOP, // loop when we hit the end time
+  
+   clockStep : Cesium.ClockStep.SYSTEM_CLOCK_MULTIPLIER,
+   multiplier : 1, // how much time to advance each tick
+   shouldAnimate : true // Animation on by default
+});
+    
     var viewer = new Cesium.Viewer('cesiumContainer', {
-        terrainProvider: Cesium.createWorldTerrain()
+        terrainProvider: Cesium.createWorldTerrain(),
+        shouldAnimate : true
     });
     var tileset = viewer.scene.primitives.add(
         new Cesium.Cesium3DTileset({
@@ -22,6 +34,7 @@
         })
     );
     viewer.zoomTo(tileset);
+    viewer.scene.globe.enableLighting = true;
   </script>
   <iframe src="Calipso_v016_trip"></iframe>
 </body>
