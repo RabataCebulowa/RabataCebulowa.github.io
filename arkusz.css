@@ -22,5 +22,5 @@ body
 
 /*SMARTFON*/
 @media (max-width: 599px) {
-   #cesiumContainer {height: 88%;}
+   #cesiumContainer {height: 100%;}
    }
